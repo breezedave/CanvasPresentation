@@ -6,6 +6,19 @@ var slideChanger = function(evt) {
     if(evt.clientX >= right) getSlide(1);
 }
 
+var slideChangerByKey = function(evt) {
+    switch(evt.keyCode) {
+        case 37:
+        case 38:
+            getSlide(-1);
+            break;
+        case 39:
+        case 40:
+            getSlide(1);
+            break;
+    };
+}
+
 var getSlide = function(direction) {
     var slideNum = -1
     for(var i=0; i < screenNames.length; i++) {

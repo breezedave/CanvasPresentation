@@ -16,6 +16,7 @@ var buildBg = function() {
     fgCanv.height = global.h;
 
     fgCanv.onclick = slideChanger;
+    document.body.onkeydown = slideChangerByKey;
 
     canv.id = "bg";
     canv.width = global.w;
