@@ -16,4 +16,6 @@ var getSlide = function(direction) {
         global.screen = screenNames[slideNum];
         global.tick = 0;
     }
+    egX=0;
+    global.frameRate = false;
 }
