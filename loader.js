@@ -22,6 +22,10 @@ var screenNames = [
     , "slide4"
     , "slide4a"
     , "slide4b"
+    , "slide5"
+    , "slide5a"
+    , "slide5b"
+    , "slide5c"
     , "slide1"
 ]
 

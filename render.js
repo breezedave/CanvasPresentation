@@ -72,7 +72,31 @@ var render = function() {
                 renderSlide4b();
                 preRendered();
                 break;
-
+            case "slide5":
+                egCtx.clearRect(0, 0, global.w, global.h);
+                renderSlide5();
+                break;
+            case "slide5a":
+                global.tick = 200;
+                egCtx.clearRect(0, 0, global.w, global.h);
+                renderSlide5();
+                renderSlide5a();
+                break;
+            case "slide5b":
+                global.tick = 200;
+                egCtx.clearRect(0, 0, global.w, global.h);
+                renderSlide5();
+                renderSlide5a();
+                renderSlide5b();
+                break;
+            case "slide5c":
+                global.tick = 200;
+                egCtx.clearRect(0, 0, global.w, global.h);
+                renderSlide5();
+                renderSlide5a();
+                renderSlide5b();
+                renderSlide5c();
+                break;
         }
     } else {
         renderLoading();
@@ -174,6 +198,29 @@ var renderSlide4a = function() {
 var renderSlide4b = function() {
     fgCtx.drawImage(canvases["slide4bLine0"], 100, 800);
     fgCtx.drawImage(canvases["slide4bLine1"], 100, 850);
+}
+
+var renderSlide5 = function() {
+    fgCtx.drawImage(canvases["slide5Title"], parseInt(global.w/2-600), 100);
+}
+
+var renderSlide5a = function() {
+    fgCtx.drawImage(canvases["slide5Line0"], 100, 240);
+    fgCtx.drawImage(canvases["slide5Line1"], 100, 300);
+    fgCtx.drawImage(canvases["slide5Line2"], 100, 350);
+}
+
+var renderSlide5b = function() {
+    fgCtx.drawImage(canvases["slide5Line3"], 100, 490);
+    fgCtx.drawImage(canvases["slide5Line4"], 100, 550);
+    fgCtx.drawImage(canvases["slide5Line5"], 100, 600);
+}
+
+var renderSlide5c = function() {
+    fgCtx.drawImage(canvases["slide5Line6"], 100, 740);
+    fgCtx.drawImage(canvases["slide5Line7"], 100, 800);
+    fgCtx.drawImage(canvases["slide5Line8"], 100, 850);
+    fgCtx.drawImage(canvases["slide5Line9"], 100, 900);
 }
 
 

@@ -171,7 +171,7 @@ var buildAllWords = function() {
     buildWord("slide3bLine0", "And a version where we beginPath,", colors.WHITE, 40, 1200, "left");
     buildWord("slide3bLine1", "endPath, fill and stroke just once", colors.WHITE, 40, 1200, "left");
 
-    buildWord("slide4TitleA", "MULTIPLE CANVASES ", colors.WHITE, 60, 1200, "center");
+    buildWord("slide4TitleA", "MULTIPLE CANVASES", colors.WHITE, 60, 1200, "center");
     buildWord("slide4TitleB", "& PRE-RENDERING", colors.WHITE, 60, 1200, "center");
 
     buildWord("slide4Line0", "If you have content that doesn't change", colors.WHITE, 40, 1200, "left");
@@ -187,5 +187,20 @@ var buildAllWords = function() {
 
     buildWord("slide4bLine0", "And a version", colors.WHITE, 40, 1200, "left");
     buildWord("slide4bLine1", "using a pre-rendered canvas", colors.WHITE, 40, 1200, "left");
+
+    buildWord("slide5Title", "OTHER TECHNIQUES", colors.WHITE, 60, 1200, "center");
+
+    buildWord("slide5Line0", "CHANGE STYLES LESS:", colors.WHITE, 50, 1200, "left");
+    buildWord("slide5Line1", "Every style change costs rendering time", colors.WHITE, 40, 1200, "left");
+    buildWord("slide5Line2", "Try rendering all objects of one color before moving to another", colors.WHITE, 40, 1400, "left");
+
+    buildWord("slide5Line3", "USE INTEGERS:", colors.WHITE, 50, 1200, "left");
+    buildWord("slide5Line4", "Rendering a float means the canvas", colors.WHITE, 40, 1200, "left");
+    buildWord("slide5Line5", "has to use anti-aliasing which costs rendering time", colors.WHITE, 40, 1200, "left");
+
+    buildWord("slide5Line6", "LAYER CANVASES:", colors.WHITE, 50, 1200, "left");
+    buildWord("slide5Line7", "If you have a truly static background layer", colors.WHITE, 40, 1200, "left");
+    buildWord("slide5Line8", "you can draw it once and layer another canvas on top", colors.WHITE, 40, 1200, "left");
+    buildWord("slide5Line9", "This demo has used 3 layers", colors.WHITE, 40, 1200, "left");
 
 }
