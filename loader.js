@@ -16,27 +16,21 @@ var screenNames = [
     , "slide3"
 ]
 
-var canvases = {
-    bg: null
-    , loading: null
-    , title: null
-    , page1: null
-}
+var canvases = {}
 
-var contexts = {
-    bg: null
-    , loading: null
-    , title: null
-    , page1: null
-}
+var contexts = {}
 
 var builders = {
-    "Loading Background": buildBg
-    , "Loading Screen": buildLoading
-    , "Loading Title": buildTitle
+    "Loading Title": buildTitle
+    , "Building Words": buildAllWords
 }
 
 var load = function() {
-    for(i in builders) builders[i]();
+    buildBg();
+    buildLoading();
     render();
+    for(i in builders) builders[i]();
+    setTimeout(function() {
+        global.loaded = true;
+    }, 500);
 }

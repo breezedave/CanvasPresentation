@@ -77,3 +77,37 @@ var buildTitle = function(){
     ctx.font="40px Comfortaa";
     ctx.fillText("EFFICIENCIES IN ANIMATION", parseInt(global.w/2), parseInt(global.h/2) + 50);
 }
+
+var buildWord = function(name, word, color, size) {
+    canvases[name] = document.createElement("canvas");
+    contexts[name] = canvases[name].getContext("2d");
+    var canv = canvases[name];
+    var ctx = contexts[name];
+
+    canv.width = 800;
+    ctx.textAlign = "center";
+    ctx.font=size + "px Comfortaa";
+    ctx.fillStyle = color;
+    ctx.fillText(word, 400, size);
+}
+
+var buildAllWords = function() {
+    buildWord("slide1Title", "WHAT WE'LL USE", colors.WHITE, 80);
+    buildWord("slide1Word0", "window.requestAnimationFrame", colors.PURPLE, 40);
+    buildWord("slide1Word1", "var canvas = createElement('canvas')", colors.ORANGE, 40);
+    buildWord("slide1Word2", "var ctx = canvas.getContext('2d')", colors.ORANGE, 40);
+    buildWord("slide1Word3", "ctx.fillStyle", colors.AQUA, 40);
+    buildWord("slide1Word4", "ctx.strokeStyle", colors.AQUA, 40);
+    buildWord("slide1Word5", "ctx.font", colors.BLUE, 40);
+    buildWord("slide1Word6", "ctx.fillText", colors.BLUE, 40);
+    buildWord("slide1Word7", "ctx.clearRect", colors.GREEN, 40);
+    buildWord("slide1Word8", "ctx.fillRect", colors.GREEN, 40);
+    buildWord("slide1Word9", "ctx.strokeRect", colors.GREEN, 40);
+    buildWord("slide1Word10", "ctx.beginPath", colors.RED, 40);
+    buildWord("slide1Word11", "ctx.moveTo", colors.RED, 40);
+    buildWord("slide1Word12", "ctx.lineTo", colors.RED, 40);
+    buildWord("slide1Word13", "ctx.closePath", colors.RED, 40);
+    buildWord("slide1Word14", "ctx.fill", colors.RED, 40);
+    buildWord("slide1Word15", "ctx.stroke", colors.RED, 40);
+    buildWord("slide1Word16", "ctx.drawImage", colors.SALMON, 40);
+}
